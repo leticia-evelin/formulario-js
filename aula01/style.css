@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 12px;
+    box-shadow: 0px 0px 12px #000;
+
+}
+
+.sombraAzul{
+    box-shadow: 0px 0px 12px blue;
+}
+.sombraVermelha{
+    box-shadow: 0px 0px 12px red;
+}
