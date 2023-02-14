@@ -12,22 +12,18 @@ const media = document.getElementById('media')
 const formulario = document.getElementById('formulario')
 
 function somar (){
-    // situacao.value = (Number(nota1.value) + Number(nota2.value))
-    // formulario.classList.add('sombraVerde')
+
+    if((Number(nota1.value) + Number(nota2.value)) / 2 >= 5 ){
+        formulario.classList.add('sombraAzul')
+        situacao.value = 'Aprovado'
+        
+
+    }else if ((Number(nota1.value) + Number(nota2.value)) / 2 < 5){
+        formulario.classList.remove('sombraAzul')
+        formulario.classList.add('sombraVermelha')
+        situacao.value = 'Reprovado'
+       
+    }   
 }
- function situacao(){
-    media.value = (Number(nota1.value) + Number(nota2.value)) / '2' ;
-
-        if(media >= 5 ){
-            situacao.value = 'Aprovado'
-            formulario.classList.add('sombraAzul')
-
-        }else(media < 5){
-            situacao.value = 'Reprovado'
-            formulario.classList.add('sombraVermelha')
-        }   
-
-    }
-
-calcular.addEventListener('click', situacao)
+calcular.addEventListener('click', somar)
 
