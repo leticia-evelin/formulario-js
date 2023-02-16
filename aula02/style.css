@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    min-height: 50vh;
+    background-color: black;
+    gap: 12px;
+    margin: 32px;
+    padding: 12px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.aluno{
+    height: 200px;
+    width: 200px;
+    /* background-color: blueviolet; */
+}
+
+.aluno__title{
+    text-align: center;
+    padding: 8px;
+}
+
+
+.nota__media{
+    text-align: center;
+    padding: 8px;
+    font-size: 60px;
+}
+
+.aprovado{
+    background-color: blue;
+}
+.reprovado{
+    background-color: red;
+}
