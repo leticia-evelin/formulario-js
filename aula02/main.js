@@ -26,13 +26,24 @@ const adicionarCard = (aluno, nota) => {
 
     const novaDiv = document.createElement('div')
     novaDiv.classList.add('aluno')
-    novaDiv.innerHTML = `<h2 class = "aluno__title">${aluno}</h2>`
 
-    const notaDiv = document.createElement('mediaDiv')
-    notaDiv.classList.add('nota')
-    notaDiv.innerHTML = `<p class = "nota__media">${nota}</p>`
+    if(nota >= 5){
+        novaDiv.classList.remove('aluno')
+        novaDiv.classList.add('aprovado')
+    } else {
+        novaDiv.classList.remove('aluno')
+        novaDiv.classList.add('reprovado')
+    }
 
-    novaDiv.append(notaDiv)
+    novaDiv.innerHTML = `<h2 class = "aluno__title">${aluno}</h2> + <h2 class = "mediaDiv">${nota}</h2>`
+
+    console.log(typeof(nota))
+
+    //const notaDiv = document.createElement('mediaDiv')
+    //notaDiv.classList.add('nota')
+    //notaDiv.innerHTML = `<p class = "nota__media">${nota}</p>`
+
+    //novaDiv.append(notaDiv)
     container.appendChild(novaDiv)
     //container.appendChild(notaDiv)
     return 'teste'
@@ -41,20 +52,22 @@ const adicionarCard = (aluno, nota) => {
 }
 
 const handleClick = () => {
-    const aluno = {
+    const nomeAluno = prompt('Digite um nome para o card')
+    const notaAluno =  prompt('Digite a média')
+       
 
-        nome :  prompt('Digite um nome para o card'),
-        nota : prompt('Digite a média')
+    console.log(notaAluno)
+
+    if(notaAluno == "" ){
+        alert('ERRO: Por favor, preencha todos os campos!')
+    } else if ( isNaN(notaAluno)){
+        alert('ERRO: Por favor, digite apenas números!')
+    }   else if (notaAluno < 0 || notaAluno > 10) {
+        alert('ERRO: Digite notas de 0 até 10')
+    } else {
+        adicionarCard(nomeAluno, notaAluno)
     }
-    
-    adicionarCard(nomeAluno, notaAluno)
-
-   
-
-     if(notaAluno >= 5 ){
-         novaDiv.classList.add('aprovado')
-     }else(notaAluno < 5)
-         novaDiv.classList.add('reprovado')
+  
 }
 adicionar.addEventListener('click', handleClick)
 
