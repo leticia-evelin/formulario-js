@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./card.js"></script>
+    <!-- <script src="./card.js"></script> -->
+   <script src="./cardProduto.js"></script>
     <title>Web Component</title>
 </head>
 <body>
@@ -13,7 +14,23 @@
         <card-leticia nome = "Ana" foto = "./contact2.png" cor = "purple"></card-leticia>
         <card-leticia nome = "José" foto = "./contact5.png"></card-leticia>
         <card-leticia nome = "Angélica" foto = "./contact4.png" cor = "tomato"></card-leticia>
+
+        <card-produto 
+         name = "Tablet Apple iPad Pro"
+         image = "./tablet.png" 
+         description = "Tablet com tela de 11 polegadas, processador A12Z Bionic e câmera de 12 MP" 
+         price = "8499.99">
+        </card-produto>
+
+        <card-produto 
+         name = "Monitor Samsung LED 23.8 polegadas" 
+         image = "./monitor.png" 
+         description = "Monitor LED com resolução Full HD e tempo de resposta de 5ms" price = "799.99">
+        </card-produto>
+
+        <!-- <card-produto></card-produto> -->
     </div>
-  
+
+
 </body>
 </html>

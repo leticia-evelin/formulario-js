@@ -1,6 +1,5 @@
 'use strict'
 
-// import styled from "styled-components";
 
 class card extends HTMLElement {
     constructor(){
