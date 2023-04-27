@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.menu-container{
+    background-color: plum;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#root{
+    height: 100%;
+}
+/* criar classe para não repetir codigo css */
+.container{
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.home-container{
+    background-color: black;
+}
+
+.azul-container{
+    background-color: blue;
+}
+
+.vermelho-container{
+    background-color: red;
+}
+
+.verde-container{
+    background-color: green;
+}
+
+.amarelo-container{
+    background-color: yellow;
+}
